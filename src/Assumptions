@@ -1,0 +1,12 @@
+1. we are matching one supplier transaction against all buyer transaction.
+2. if we have multiple partial matches we will return the best partial match
+3. for partial match we are calculating diff of each field and comparing the same against the local threshold.
+   if the diff is within the range of local threshold, we check for global threshold range.
+3. if any of the fields is empty, in either of transactions we dont consider a partial match
+4. one supplier transaction can be exact match of one buyer transaction,
+    or can be partial match for other buyer transaction
+5. One buyer transaction can be exact match for more than one seller transactions, and partial match for
+    other seller transaction
+
+
+
